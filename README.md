@@ -3,7 +3,7 @@
 An unofficial, Claude Code-style statusline for the [Pi](https://pi.dev) coding agent. It replaces Pi's footer with a compact two-line status bar.
 
 ```
-🤖 Qwen3.8-Flash-Next | 🧠 ▱▱▱▱▱▱▱▱▱▱ 2% | 🎯 medium | 📁 Mike
+🤖 Qwen3.8-Flash-Next | 🧠 ▱▱▱▱▱▱▱▱▱▱ 2% | 🎯 medium | 📁 Folder
 📊 ↑22.9k ↓1.1k | ⚡ 45.2 tok/s
 ```
 

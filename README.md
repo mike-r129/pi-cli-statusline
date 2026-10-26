@@ -4,7 +4,7 @@ An unofficial, Claude Code-style statusline for the [Pi](https://pi.dev) coding 
 
 ```
 🤖 Qwen3.8-Flash-Next | 🧠 ▱▱▱▱▱▱▱▱▱▱ 2% | 🎯 medium | 📁 Folder
-📊 ↑22.9k ↓1.1k | ⚡ 45.2 tok/s
+📊 ↑22.9k ↓1.1k | 💬 12 turns | ⚡ 45.2 tok/s
 ```
 
 ## What it shows
@@ -16,6 +16,7 @@ An unofficial, Claude Code-style statusline for the [Pi](https://pi.dev) coding 
 | 🎯 | Thinking level (`off` … `high`; `max` is shown as `MAX`). |
 | 📁 | Working folder, plus the git branch when there is one. |
 | 📊 | Input and output tokens for the current session branch. |
+| 💬 | Turns: prompts you've sent in the current session branch. A cue for when to start fresh with `/new`. |
 | ⚡ | Decode speed of the last response: output tokens divided by the time from first streamed token to end, so prompt processing is excluded. Handy for comparing local models. |
 
 Status text set by other extensions (`ctx.ui.setStatus`), such as workflow progress, is appended to the second line.

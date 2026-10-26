@@ -2,7 +2,7 @@
  * Claude-Code-style statusline for Pi (same layout as a Claude Code statusline script).
  *
  * Line 1: 🤖 model | 🧠 context bar | 🎯 thinking level | 📁 folder (branch)
- * Line 2: 📊 session tokens | ⚡ last-response decode speed | extension statuses
+ * Line 2: 📊 session tokens | 💬 turns | ⚡ last-response decode speed | extension statuses
  *
  * Rate-limit and cost segments are dropped: they mean nothing for a local model.
  * Run /statusline to toggle back to Pi's default footer.
@@ -60,14 +60,16 @@ export default function (pi: ExtensionAPI) {
 
 					let input = 0;
 					let output = 0;
+					let turns = 0;
 					for (const e of ctx.sessionManager.getBranch()) {
+						if (e.type === "message" && e.message.role === "user") turns++;
 						if (e.type === "message" && e.message.role === "assistant") {
 							const m = e.message as AssistantMessage;
 							input += m.usage?.input ?? 0;
 							output += m.usage?.output ?? 0;
 						}
 					}
-					const parts2 = [`📊 ↑${fmtTokens(input)} ↓${fmtTokens(output)}`];
+					const parts2 = [`📊 ↑${fmtTokens(input)} ↓${fmtTokens(output)}`, `💬 ${turns} turns`];
 					if (lastTps !== undefined) parts2.push(`⚡ ${lastTps.toFixed(1)} tok/s`);
 					for (const status of footerData.getExtensionStatuses().values()) {
 						if (status) parts2.push(status);

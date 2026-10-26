@@ -1,0 +1,31 @@
+{
+  "name": "pi-cli-statusline",
+  "version": "0.1.0",
+  "description": "Unofficial Claude Code-style two-line statusline for the Pi coding agent: context bar, thinking level, tokens and decode speed.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mike-r129/pi-cli-statusline"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "statusline",
+    "footer"
+  ],
+  "files": [
+    "extensions/",
+    "LICENSE",
+    "README.md"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/statusline.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  }
+}

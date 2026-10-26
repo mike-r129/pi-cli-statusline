@@ -44,7 +44,7 @@ The statusline turns on automatically when a session starts. Run `/statusline` t
 
 ## Requirements
 
-- Pi 1.4.0 or newer (tested on 1.4.0, Windows Terminal and the VS Code terminal).
+- Pi 1.4.0 or newer (tested on 1.4.0 on Windows).
 - A terminal and font that render emoji and the `▰▱` block characters.
 
 ## License

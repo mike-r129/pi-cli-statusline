@@ -1,5 +1,5 @@
 /**
- * Claude-Code-style statusline for Pi (mirrors ~/.claude/statusline.sh).
+ * Claude-Code-style statusline for Pi (same layout as a Claude Code statusline script).
  *
  * Line 1: 🤖 model | 🧠 context bar | 🎯 thinking level | 📁 folder (branch)
  * Line 2: 📊 session tokens | ⚡ last-response decode speed | extension statuses
